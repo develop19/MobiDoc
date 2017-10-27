@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.neeraj.example.doct.SearchDoctorNav"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_search_doctor_nav"
+    >
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="enter doctor type"
+        android:id="@+id/searchdoctor"
+        android:spinnerMode="dialog"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textSize="25dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/searchdoctor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/doctor"
+        android:layout_below="@+id/search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.neeraj.example.doct.MainActivityNav"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main_activity_nav"
+    android:weightSum="100">
+
+    <ImageView
+        android:layout_weight="40"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/hospital"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="4dp"
+        android:padding="7dp"
+        android:layout_height="wrap_content"
+        android:text="Find Disease Based on the symptoms"
+        android:textSize="20dp"
+        android:background="@drawable/backbutton"
+        android:drawableLeft="@drawable/sd1"
+        android:layout_weight="15"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchdoc"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/backbutton"
+        android:drawableLeft="@drawable/doctor1"
+        android:padding="7dp"
+        android:textSize="20dp"
+        android:text="search doctors"
+        android:layout_weight="15"/>
+
+    <Button
+        android:id="@+id/butmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="4dp"
+        android:text="search medicines"
+        android:textSize="20dp"
+        android:background="@drawable/backbutton"
+        android:drawableLeft="@drawable/medicines"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="20dp"
+        android:layout_weight="15"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backbutton"
+        android:drawableLeft="@drawable/question"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="4dp"
+        android:padding="7dp"
+        android:text="HELP"
+        android:id="@+id/help"
+        android:textSize="20dp"
+        android:layout_weight="15"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+
+
+</LinearLayout>

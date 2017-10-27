@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.neeraj.example.doct.SymptomActivityNav"
+    tools:showIn="@layout/app_bar_symptom_activity_nav"
+    >
+    <ImageButton
+        android:id="@+id/btn_speak"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/mic"
+        android:text="Speak"
+        android:visibility="visible"
+        android:layout_below="@+id/autocomplete"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:text="Age"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/ageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your age"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sex"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:id="@+id/textView"
+
+        android:layout_below="@+id/ageText"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <!--Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/textView2"
+
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="22dp" /!-->
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/ageText"
+        android:layout_alignLeft="@+id/ageText"
+        android:layout_alignStart="@+id/ageText">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_alignBottom="@+id/radioGroup"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button" />
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_alignBaseline="@+id/male"
+            android:layout_alignRight="@+id/male"
+            android:layout_alignLeft="@+id/ageText"
+            android:layout_alignStart="@+id/ageText" />
+
+
+    </RadioGroup>
+
+    <AutoCompleteTextView
+        android:id="@+id/autocomplete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search your symptoms"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></AutoCompleteTextView>
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/arrow"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/tap"
+        android:background="@drawable/add"
+        android:layout_below="@+id/autocomplete"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="true"
+        android:scrollbars="vertical"
+        android:background="@drawable/back"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="List of Symptoms selected:-"
+        android:textStyle="bold"
+        android:layout_above="@+id/list"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
