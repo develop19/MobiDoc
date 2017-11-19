@@ -41,6 +41,7 @@ public class SearchMedicineNav extends AppCompatActivity
     ImageView imageView;
     Button submit;
     ProgressBar progressBar;
+    int arrsize=0;
     TextView display,display2,display3,des;
     String data="",id;
     String[] Symptom_names,id_array;
@@ -101,6 +102,7 @@ public class SearchMedicineNav extends AppCompatActivity
                 //androidBooks
                 System.out.println(Symptom_names[i]);
                 id_array[i] = temp;
+                arrsize++;
                 i++;
             }while(cursor.moveToNext());
 
@@ -121,25 +123,31 @@ public class SearchMedicineNav extends AppCompatActivity
                         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                     }
-                    progressBar.setVisibility(View.VISIBLE);
-                    progressBar.getIndeterminateDrawable().setColorFilter(0xFFFFFFFF, android.graphics.PorterDuff.Mode.MULTIPLY);
-                    imageView.setVisibility((View.INVISIBLE));
+
                     //   Toast.makeText(SearchMedicineNav.this, "please wait while we process your data", Toast.LENGTH_SHORT).show();
                     String symp = acTextView.getText().toString();
                     System.out.println(symp);
-                    int flag = 0;
-                    for (int j = 0; j < id_array.length; j++) {
+                    int flg = 0;
+                    for (int j = 0; j < arrsize; j++) {
                         if (Symptom_names[j].equals(symp)) {
-                            flag = 1;
+                            flg = 1;
                             id = id_array[j];
                             System.out.println(id);
-                            break;
+                            //break;
                         }
                     }
                     //System.out.println(id);
-                    submit.setClickable(false);
-                    String ur = "https://www.drugbank.ca/drugs/" + id + "#interactions";
-                    new SearchMedicineNav.QuestionAsynTask().execute(ur);
+                    if(flg==1) {
+                        progressBar.setVisibility(View.VISIBLE);
+                        progressBar.getIndeterminateDrawable().setColorFilter(0xFFFFFFFF, android.graphics.PorterDuff.Mode.MULTIPLY);
+                        imageView.setVisibility((View.INVISIBLE));
+                        submit.setClickable(false);
+                        String ur = "https://www.drugbank.ca/drugs/" + id + "#interactions";
+                        new SearchMedicineNav.QuestionAsynTask().execute(ur);
+                    }
+                    else {
+                        Toast.makeText(SearchMedicineNav.this,"Medicine not found...:-(",Toast.LENGTH_LONG).show();
+                    }
                 }
                 else
                 {
@@ -244,12 +252,12 @@ public class SearchMedicineNav extends AppCompatActivity
         }
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.search_medicine_nav, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -287,10 +295,6 @@ public class SearchMedicineNav extends AppCompatActivity
         } else if (id == R.id.help) {
             Intent i=new Intent(this,Help.class);
             startActivity(i);
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

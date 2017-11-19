@@ -81,12 +81,12 @@ public class SearchDoctorNav extends AppCompatActivity
         }
     }
 
-    @Override
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.search_doctor_nav, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -125,12 +125,7 @@ public class SearchDoctorNav extends AppCompatActivity
             Intent i=new Intent(this,Help.class);
             startActivity(i);
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

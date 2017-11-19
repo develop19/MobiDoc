@@ -385,12 +385,12 @@ public class MainActivityNav extends AppCompatActivity
         }
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_activity_nav, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -428,10 +428,6 @@ public class MainActivityNav extends AppCompatActivity
         } else if (id == R.id.help) {
             Intent i=new Intent(MainActivityNav.this,Help.class);
             startActivity(i);
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

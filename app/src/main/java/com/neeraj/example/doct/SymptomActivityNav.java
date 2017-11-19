@@ -137,6 +137,7 @@ public class SymptomActivityNav extends AppCompatActivity
                 else {
 
                     // String symp = acTextView.getText().toString();
+                    Toast.makeText(SymptomActivityNav.this,"Processing your data... please wait",Toast.LENGTH_LONG).show();
                     age = Integer.parseInt(ageText.getText().toString());
                     // System.out.println(symp);
                     /*int flag = 0;
@@ -435,12 +436,12 @@ public class SymptomActivityNav extends AppCompatActivity
         }
     }
 
-    @Override
+  /*  @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.symptom_activity_nav, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -479,12 +480,7 @@ public class SymptomActivityNav extends AppCompatActivity
             Intent i=new Intent(this,Help.class);
             startActivity(i);
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

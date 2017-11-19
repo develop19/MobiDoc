@@ -37,7 +37,7 @@ public class DiseaseDetails extends AppCompatActivity {
         tseverity=(TextView)findViewById(R.id.severity);
         thint=(TextView)findViewById(R.id.hint);
         bfind=(Button)findViewById(R.id.find);
-        bfind.setVisibility(View.INVISIBLE);
+        //bfind.setVisibility(View.INVISIBLE);
 
         String data=getIntent().getStringExtra("json");
         try {

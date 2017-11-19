@@ -8,46 +8,48 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/doctor2"
-        android:label="Doctzzzz"
+        android:label="MobiDoc"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".SymptomActivityNav"
-            android:windowSoftInputMode="adjustPan"
-            android:label="Search Symptoms" />
+            android:label="Search Symptoms"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Disease"
-            android:windowSoftInputMode="adjustPan"
-            android:label="List Of Diseases" />
+            android:label="List Of Diseases"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".SearchMedicineNav"
             android:label="Search Medicines"
-
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".SearchDoctorNav"
             android:label="Search Doctors" />
         <activity
             android:name=".Help"
-            android:windowSoftInputMode="adjustPan"
-            android:label="Help" />
+            android:label="Help"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".DiseaseDetails"
-            android:windowSoftInputMode="adjustPan"
-            android:label="Disease Details" />
+            android:label="Disease Details"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainActivityNav"
-            android:windowSoftInputMode="adjustPan"
-            android:label="Doctzzzz">
+            android:label="Doctzzzz"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".test" />
+        <activity android:name=".Lander"></activity>
+        <activity android:name=".Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".test"></activity>
     </application>
 
 </manifest>

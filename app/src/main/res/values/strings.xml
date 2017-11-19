@@ -23,4 +23,8 @@
     <string name="title_activity_symptom_nav">SymptomActivityNav</string>
     <string name="title_activity_search_doctor_nav">SearchDoctorNav</string>
     <string name="title_activity_search_medicine_nav">SearchMedicineNav</string>
+
+    <string name="title_activity_launcher">launcher</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
